@@ -1,4 +1,52 @@
+'use strict';
 
+let inputEl = document.querySelector('#inp');
+let buttonEl = document.querySelector('#btn');
+let paragraphEl = document.querySelector('#para');
+let listEl = document.querySelector('#list');
+let textAttention = document.querySelector('#attention');
+
+buttonEl.addEventListener('click',onButtonClick);
+
+function onButtonClick () {
+    let writtenTask = inputEl.value;
+    let itemEl = document.createElement('li');
+    itemEl.classList.add('todo-item');
+    let itemButtonEl = document.createElement('button');
+    itemButtonEl.textContent = 'X';
+    itemButtonEl.classList.add('todo-item-button');
+    let itemParagraphEl = document.createElement('p');
+    itemParagraphEl.textContent = writtenTask;
+
+    if (inputEl.value === '') {
+        textAttention.textContent = 'Поле должно быть заполнено!';
+    } else {
+        listEl.append(itemEl);
+        itemEl.append(itemButtonEl);
+        itemEl.append(itemParagraphEl);
+        inputEl.value = '';
+        textAttention.textContent = '';
+    }
+
+    listEl.addEventListener('click', onTaskItemClick);
+    listEl.addEventListener('click', onClickDeleteTask);
+
+    function onTaskItemClick (e) {
+        let item = e.target.closest('.todo-item');
+        if (item === e.target) item.classList.toggle('todo-item-done');
+    }
+
+    function onClickDeleteTask(e) {
+        let itemForDelete = e.target.closest('.todo-item');
+        let delBtn = e.target.closest('.todo-item-button');
+        if (delBtn === e.target) itemForDelete.remove();
+    }
+}
+
+
+
+
+// Поле должно быть заполнено!
 
 
 

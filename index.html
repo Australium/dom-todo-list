@@ -11,44 +11,54 @@
     <div class="wrapper">
         <form class="form" id="form-list" onsubmit="return false">
             <label for="inp" class="label">Task:</label>
-            <input type="text" class="inp-task" id="inp" placeholder="Your task here">
+            <div class="input-wrap">
+                <input type="text" class="inp-task" id="inp" placeholder="Your task here" size="30">
+                <p class="warning" id="attention"></p>
+            </div>
             <button class="button" id="btn" type="button">Add</button>
         </form>
     </div>
+    <hr class="hr">
     <div class="task-container" id="container">
-        <!-- <ul class="list">
-            <li class="todo-item">Do my homework, read a book, learn new stuff
-                <button class="todo-item-button" id="buttn" type="button">X</button>
-            </li>
-            <li class="todo-item">Do my homework, read a book, learn new stuff
-                <button class="todo-item-button" id="buttn" type="button">X</button>
-            </li>
-            <li class="todo-item">Clean house
-                <button class="todo-item-button" id="buttn" type="button">X</button>
-            </li>
-            <li class="todo-item">Clean house
-                <button class="todo-item-button" id="buttn" type="button">X</button>
-            </li>
-            <li class="todo-item">Clean house
-                <button class="todo-item-button" id="buttn" type="button">X</button>
-            </li>
-            <li class="todo-item">Clean house
-                <button class="todo-item-button" id="buttn" type="button">X</button>
-            </li>
-            <li class="todo-item">Do my homework, read a book, learn new stuff
-                <button class="todo-item-button" id="buttn" type="button">X</button>
-            </li>
-            <li class="todo-item">Do my homework, read a book, learn new stuff
-                <button class="todo-item-button" id="buttn" type="button">X</button>
-            </li>
-            <li class="todo-item">Do my homework, read a book, learn new stuff
-                <button class="todo-item-button" id="buttn" type="button">X</button>
-            </li>
-            <li class="todo-item">Do my homework, read a book, learn new stuff
-                <button class="todo-item-button" id="buttn" type="button">X</button>
-            </li>
-        </ul> -->
+        <ul class="task-list" id="list"></ul>
     </div>
     <script src="app.js"></script>
 </body>
 </html>
+
+
+
+
+<!-- <li class="todo-item">
+                <p class="todo-item-text">
+                    Do my homework, read a book, learn new stuff
+                </p>
+                <button class="todo-item-button" id="buttn" type="button">X</button>
+            </li>
+            <li class="todo-item">Do my homework, read a book, learn new stuff
+                <button class="todo-item-button" id="buttn" type="button">X</button>
+            </li>
+            <li class="todo-item">Clean house
+                <button class="todo-item-button" id="buttn" type="button">X</button>
+            </li>
+            <li class="todo-item">Clean house
+                <button class="todo-item-button" id="buttn" type="button">X</button>
+            </li>
+            <li class="todo-item">Clean house
+                <button class="todo-item-button" id="buttn" type="button">X</button>
+            </li>
+            <li class="todo-item">Clean house
+                <button class="todo-item-button" id="buttn" type="button">X</button>
+            </li>
+            <li class="todo-item">Do my homework, read a book, learn new stuff
+                <button class="todo-item-button" id="buttn" type="button">X</button>
+            </li>
+            <li class="todo-item">Do my homework, read a book, learn new stuff
+                <button class="todo-item-button" id="buttn" type="button">X</button>
+            </li>
+            <li class="todo-item">Do my homework, read a book, learn new stuff
+                <button class="todo-item-button" id="buttn" type="button">X</button>
+            </li>
+            <li class="todo-item">Do my homework, read a book, learn new stuff
+                <button class="todo-item-button" id="buttn" type="button">X</button>
+            </li> -->
