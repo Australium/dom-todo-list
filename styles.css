@@ -46,13 +46,14 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
-    /* height: 100vh;
-    overflow: auto; */
 }
 
 .task-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    column-gap: 7px;
+    row-gap: 15px;
+    width: 100%;
 }
 
 .todo-item {
@@ -61,32 +62,13 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgb(230, 230, 45);
-    margin: 0 10px 20px 0;
     position: relative;
     border-radius: 5px;
-    width: 30%;
 }
-
-.todo-item-small {
-    width: 50%;
-}
-
-.todo-item-smaller {
-    width: 30%;
-}
-
 .todo-item:hover {
     box-shadow: 5px 9px 8px lightgrey;
     transition: 0.7s;
 }
-
-.todo-item:nth-child(3n) {
-    margin-right: 0;
-}
-
-/* .todo-item:nth-child(2n) {
-    margin-right: 0;
-} */
 
 .todo-item-button {
     position: absolute;

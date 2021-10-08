@@ -8,6 +8,9 @@ let textAttention = document.querySelector('#attention');
 
 buttonEl.addEventListener('click',onButtonClick);
 
+listEl.addEventListener('click', onTaskItemClick);
+listEl.addEventListener('click', onClickDeleteTask);
+
 function onButtonClick () {
     let writtenTask = inputEl.value;
     let itemEl = document.createElement('li');
@@ -27,22 +30,18 @@ function onButtonClick () {
         inputEl.value = '';
         textAttention.textContent = '';
     }
-
-    listEl.addEventListener('click', onTaskItemClick);
-    listEl.addEventListener('click', onClickDeleteTask);
-
-    function onTaskItemClick (e) {
-        let item = e.target.closest('.todo-item');
-        if (item === e.target) item.classList.toggle('todo-item-done');
-    }
-
-    function onClickDeleteTask(e) {
-        let itemForDelete = e.target.closest('.todo-item');
-        let delBtn = e.target.closest('.todo-item-button');
-        if (delBtn === e.target) itemForDelete.remove();
-    }
 }
 
+function onTaskItemClick (e) {
+    let item = e.target.closest('.todo-item');
+    if (item === e.target) item.classList.toggle('todo-item-done');
+}
+
+function onClickDeleteTask(e) {
+    let itemForDelete = e.target.closest('.todo-item');
+    let delBtn = e.target.closest('.todo-item-button');
+    if (delBtn === e.target) itemForDelete.remove();
+}
 
 
 
